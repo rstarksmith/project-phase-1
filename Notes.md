@@ -1,18 +1,18 @@
-Search that allows you to seach *Google Books APIs* and also can create a list of titles to read. 
-
+Author Sara J. Maas fan page to log books read from the collection.
 ### Features
-    * Form to search for book by title and display search results on page
-    * User can add book Title to "to read list"
-    * Option to delete the book from reading list (click)
-    * User has option to leave comment/review on the book (submit)
+    * Form to get book by title to display on page (submit - GET)
+        - Displays img, title, page count?, series? 
+    * User can add comments on the book (submit - POST)
+    * Option to delete the book from read list (click)
+    
 
 ### MVP
-    * Search Google Books API and return results to page
-    * User can add titles to "To Read list"
-    * User can delete titles from list
+    * Create db.json with data
+    * Form to GET book to display on the DOM
+    * Option to delete the book from the DOM
 
     
 ### Stretch Goals
-    * User can save search card to list
     * Rating System
+    * DOM changes remain upon reloading page
     

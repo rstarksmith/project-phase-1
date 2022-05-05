@@ -2,8 +2,8 @@
 This will be the overview of your project. You will detail what your project is about and its purpose.
 
 ### Requirements 
- * Have json-sever installed?
- * Use an API?
+ * Have json-sever installed
+ * 
 
 ### Installation Instructions
  * Fork and clone
