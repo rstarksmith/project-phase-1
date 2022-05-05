@@ -1,0 +1,124 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "The Assassian's Blade",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/The-Assassins-Blade-The-Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "prequel"
+        },
+        {
+            "id": 2,
+            "title": "Throne of Glass",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "1 of 7"
+        },
+        {
+            "id": 3,
+            "title": "Crown of Midnight",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Crown-of-Midnight-Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "2 of 7"
+        },
+        {
+            "id": 4,
+            "title": "Heir of Fire",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Heir-of-Fire-Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "3 of 7"
+        },
+        {
+            "id": 5,
+            "title": "Queen of Shadows",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Queen-of-Shadows-Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "4 of 7"
+        },
+        {
+            "id": 6,
+            "title": "Empire of Storms",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Empire-of-Storms-Throne-of-Glass-167x250.jpg",
+            "series": "Throne of Glass",
+            "order": "5 of 7"
+        },
+        {
+            "id": 7,
+            "title": "Tower of Dawn",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Tower-of-Dawn-Throne-of-Glass-165x250.jpg",
+            "series": "Throne of Glass",
+            "order": "6 of 7"
+        },
+        {
+            "id": 8,
+            "title": "Kingdom of Ash",
+            "img": "https://images.howtoread.me/wp-content/uploads/2017/12/Kingdom-of-Ash-Throne-of-Glass-165x250.jpg",
+            "series": "Throne of Glass",
+            "order": "7 of 7"
+        },
+        {
+            "id": 9,
+            "title": "A Court of Thorns and Roses",
+            "img": "https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9781526605399&w=&h=570",
+            "series": "ACOTAR",
+            "order": "1 of 5"
+        },
+        {
+            "id": 10,
+            "title": "A Court of Mist and Fury",
+            "img": "https://sarahjmaas.com/wp-content/uploads/2022/02/ACOMAF_2h.jpg",
+            "series": "ACOTAR",
+            "order": "2 of 5"
+        },
+        {
+            "id": 11,
+            "title": "A Court of Wings and Ruin",
+            "img": "https://sarahjmaas.com/wp-content/uploads/2022/02/ACOWAR_3h.jpg",
+            "series": "ACOTAR",
+            "order": "3 of 5"
+        },
+        {
+            "id": 12,
+            "title": "A Court of Frost and Starlight",
+            "img": "https://media.theeverygirl.com/wp-content/uploads/2022/03/a-court-of-thorns-and-roses-the-everygirl-books-4.jpg",
+            "series": "ACOTAR",
+            "order": "4 of 5"
+        },
+        {
+            "id": 13,
+            "title": "A Court of Silver Flames",
+            "img": "https://assets-global.website-files.com/5ed7d58749f36f18d80eaf28/602bf41b2996cd4a7707652f_602becc27da5edb84c29ed42_AOCSF.jpeg",
+            "series": "ACOTAR",
+            "order": "5 of 5"
+        },
+        {
+            "id": 14,
+            "title": "House of of Earth and Blood (Crescent City)",
+            "img": "https://girlinthepages.com/wp-content/uploads/sites/146/2020/11/Crescent-City.jpg",
+            "series": "Crescent City",
+            "order": "1 of TBD"
+        },
+        {
+            "id": 15,
+            "title": "House of Sky and Breath",
+            "img": "https://bookupgdl.com.mx/wp-content/uploads/2022/01/9781635574074.jpg",
+            "series": "Crescent City",
+            "order": "2 of TBD"
+        },
+        {
+            "id": 16,
+            "title": "Catwoman: Soulstealer",
+            "img": "https://kbimages1-a.akamaihd.net/013e80d6-136a-4a15-8248-e5f323444756/1200/1200/False/catwoman-soulstealer.jpg",
+            "series": "DC Icons Series",
+            "order": "standalone"
+        }
+    ],
+
+    "comments": [
+        {
+            "id": 1,
+            "bookId": 1,
+            "content": "This is my favorite book!"
+        }
+    ]
+}
