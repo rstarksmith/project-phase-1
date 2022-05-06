@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+#icon {
+    width: 80px
+}
+
+#title {
+    display: block;
+    margin: auto
+
+}
+
+.quote {
+    color: white;
+    text-align: center;
+}
