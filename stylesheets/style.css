@@ -19,3 +19,11 @@ body {
     font-style: italic;
     text-align: center;
 }
+
+
+
+/* Card css */
+
+.card {
+    width: 40%;
+}
