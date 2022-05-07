@@ -1,8 +1,8 @@
 // When the DOM loads
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    displayBooksToDom()
+    getBooks()
+    // displayBooksToDom()
 
 })
 
@@ -20,11 +20,17 @@ const headerLinks = document.querySelectorAll('.header-links')
 //Event Listeners
 
 function displayBooksToDom(){
-headerLinks.forEach(addEventListener('click', listBySeries))
+headerLinks.forEach(addEventListener('click', (e) => listBySeries))
 }
 
 
 //Event Handlers
+
+function getBooks() {
+    fetch('http://localhost:3000/books')
+    .then(resp => resp.json())
+    .then(resp => resp.filter(book => {book.series === "Throne of Glass"}))
+}
 
 function listBySeries(e) {
     e.preventDefault()
