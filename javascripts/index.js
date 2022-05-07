@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    displayBooks()
+    displayBooksToDom()
 
 })
 
@@ -19,16 +19,24 @@ const headerLinks = document.querySelectorAll('.header-links')
 
 //Event Listeners
 
-function displayBooks(){
-headerLinks.forEach(addEventListener('click', listSeriesToDom))
+function displayBooksToDom(){
+headerLinks.forEach(addEventListener('click', listBySeries))
 }
 
 
 //Event Handlers
 
-function listSeriesToDom () {
-    alert('i was clicked')
-
+function listBySeries(e) {
+    e.preventDefault()
+    if(e.target === throneOfGlass) {
+        alert('click throne')
+    } else if (e.target === acotar) {
+        alert('hi hi hi')
+    } else if(e.target === crescentCity) {
+        alert('city')
+    } else {
+        alert('full')
+    }
 }
 
 
