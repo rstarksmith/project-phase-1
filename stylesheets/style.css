@@ -24,6 +24,19 @@ body {
 
 /* Card css */
 
+.card-content {
+    background-color: black;
+}
 .card {
     width: 30%;
+}
+
+.series {
+    color: white;
+    text-align: center;
+}
+
+.book-order { 
+    color: white;
+    text-align: center;
 }

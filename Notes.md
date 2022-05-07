@@ -1,4 +1,4 @@
-Author Sara J. Maas fan page to log books read from the collection.
+Author Sara J. Maas fan page that allows you to filter each collection to the DOM.
 ### Features
     * Form to get book by title to display on page (submit - GET)
         - Displays img, title, page count?, series? 
@@ -7,9 +7,9 @@ Author Sara J. Maas fan page to log books read from the collection.
     
 
 ### MVP
-    * Create db.json with data
-    * Form to GET book to display on the DOM
-    * Option to delete the book from the DOM
+    * Create db.json file with information on Sarah J Maas books
+    * Click on collection name to post books to DOM (click)(.filter)
+    * Have the Quote change 
 
     
 ### Stretch Goals
