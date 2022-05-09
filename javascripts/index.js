@@ -1,7 +1,7 @@
 // When the DOM loads
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    throneLinkEvent()  
 
 })
 
@@ -14,6 +14,22 @@ const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const headerLinks = document.querySelectorAll('.header-links')
+
+// quote
+const divQuote = document.getElementById('title-quote')
+const h6 = document.createElement('h6')
+h6.className = 'quote'
+h6.id = 'quote-line'
+h6.innerText = '\"To the stars who listen and the dreams that are answered\"'
+//rotatingQuote // add function or set quote
+const p = document.createElement('p')
+p.className = "quote"
+p.id = 'quote-cite'
+p.innerText = '-A Court of Mist and Fury'
+// rotatingQuote // add function or set quote cite
+divQuote.append(h6, p)
+
+
 
 
 // Event Listeners
@@ -32,6 +48,13 @@ const fullLinkEvent = () => {
 
 
 // Event Handlers
+
+const loadThroneToDom = (e) => {
+    e.preventDefault()
+    alert('hi')
+}
+
+
 
 // function getBooks() {
 //     fetch('http://localhost:3000/books')
