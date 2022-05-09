@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Node Getters
-//nav bar
+// nav bar
 const throneOfGlass = document.getElementById('throne')
 const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
@@ -16,12 +16,22 @@ const fullCollection = document.getElementById('full-collect')
 const headerLinks = document.querySelectorAll('.header-links')
 
 
-//Event Listeners
+// Event Listeners
+const throneLinkEvent = () => {
+    throneOfGlass.addEventListener('click', loadThroneToDom)
+}
+const acotarLinkEvent = () => {
+    acotar.addEventListener('click', loadAcotarToDom)
+}
+const crescentLinkEvent = () => {
+    crescentCity.addEventListener('click', loadCrescentToDom)
+}
+const fullLinkEvent = () => {
+    fullCollection.addEventListener('click', loadFullToDom)
+}
 
 
-
-
-//Event Handlers
+// Event Handlers
 
 // function getBooks() {
 //     fetch('http://localhost:3000/books')
