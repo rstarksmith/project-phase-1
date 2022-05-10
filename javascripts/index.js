@@ -15,24 +15,22 @@ const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const headerLinks = document.querySelectorAll('.header-links')
 
+//** Card */
+const cardContainer = document.getElementById('card-container')
+
 
 //** Quote */
 const divQuote = document.getElementById('title-quote')
 const h6 = document.createElement('h6')
+const p = document.createElement('p')
 h6.className = 'quote'
 h6.id = 'quote-line'
 h6.innerText = '\"To the stars who listen and the dreams that are answered\"'
-//rotatingQuote // add function or set quote
-const p = document.createElement('p')
 p.className = "quote"
 p.id = 'quote-cite'
 p.innerText = '-A Court of Mist and Fury'
-// rotatingQuote // add function or set quote cite
 divQuote.append(h6, p)
 
-
-//** Card */
-const cardContainer = document.getElementById('card-container')
 
 //to clear card container
 const resetCardContainer = () => {
@@ -41,14 +39,9 @@ const resetCardContainer = () => {
 
 
 
-
-
-
-
-
 // Event Listeners
 // const throneLinkEvent = () => {
-//     throneOfGlass.addEventListener('click', renderBooksToDom)
+//     throneOfGlass.addEventListener('click', )
 // }
 // const acotarLinkEvent = () => {
 //     acotar.addEventListener('click', loadAcotarToDom)
@@ -63,12 +56,6 @@ const resetCardContainer = () => {
 
 // Event Handlers
 
-// const renderBooksToDom = (e) => {
-//     e.preventDefault()
-//     // resetCardContainer()
-
-//     alert('hi')
-// }
 
 
 
@@ -102,6 +89,31 @@ function getBooks() {
         })
     })
 }
+
+// function renderBooksToDom(book, array) {
+//     e.preventDefault()
+//     resetCardContainer()
+//     array.forEach(book => createBookCard(book))
+// }
+
+// function renderBooksToDom() {
+//     headerLinks.forEach(addEventListener('click', (e) => {
+//         e.preventDefault()
+//         resetCardContainer()
+//         if(e.target === throneOfGlass) {
+//             throneArray.forEach(book => createBookCard(book))
+//         } else if (e.target === acotar) {
+//             acotarArray.forEach(book => createBookCard(book))
+//         } else if(e.target === crescentCity) {
+//             crescentArray.forEach(book => createBookCard(book))
+//         } else if(e.target === fullCollection) {
+//             fullArray.forEach(book => createBookCard(book))
+//         }
+//     }
+// }
+
+
+
 function createBookCard (book) {
     const divRow = document.createElement('div')
     const divCol = document.createElement('div')
@@ -131,9 +143,6 @@ function createBookCard (book) {
     image.src = book.img
     pSeriesName.textContent = book.series
     pBookOrder.textContent = book.order
-
-    // return divCard ?
-
 }
 
 //HTML CARD LAYOUT
@@ -178,24 +187,6 @@ function createBookCard (book) {
 //         alert('city')
 //     } else if(e.target === fullCollection) {
 //         alert('full')
-//     }
-// }
-
-
-// headerLinks.forEach(addEventListener('click', listBySeries)
-
-
-// function listBySeries(e) {
-//     e.preventDefault()
-//     resetCardContainer()
-//     if(e.target === throneOfGlass) {
-//         throneArray.forEach(book => createBookCard(book))
-//     } else if (e.target === acotar) {
-//         acotarArray.forEach(book => createBookCard(book))
-//     } else if(e.target === crescentCity) {
-//         crescentArray.forEach(book => createBookCard(book))
-//     } else if(e.target === fullCollection) {
-//         fullArray.forEach(book => createBookCard(book))
 //     }
 // }
 
