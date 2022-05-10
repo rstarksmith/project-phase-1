@@ -1,7 +1,6 @@
 // When the DOM loads
 
-document.addEventListener('DOMContentLoaded', () => {
-    throneLinkEvent() 
+document.addEventListener('DOMContentLoaded', () => { 
     getBooks() 
 
 })
@@ -35,9 +34,9 @@ divQuote.append(h6, p)
 //** Card */
 const cardContainer = document.getElementById('card-container')
 //to clear card container
-// const resetCardContainer = () => {
-//     cardContainer.innerHTML = ''
-// }
+const resetCardContainer = () => {
+    cardContainer.innerHTML = ''
+}
 
 
 
@@ -47,28 +46,28 @@ const cardContainer = document.getElementById('card-container')
 
 
 // Event Listeners
-const throneLinkEvent = () => {
-    throneOfGlass.addEventListener('click', renderBooksToDom)
-}
-const acotarLinkEvent = () => {
-    acotar.addEventListener('click', loadAcotarToDom)
-}
-const crescentLinkEvent = () => {
-    crescentCity.addEventListener('click', loadCrescentToDom)
-}
-const fullLinkEvent = () => {
-    fullCollection.addEventListener('click', loadFullToDom)
-}
+// const throneLinkEvent = () => {
+//     throneOfGlass.addEventListener('click', renderBooksToDom)
+// }
+// const acotarLinkEvent = () => {
+//     acotar.addEventListener('click', loadAcotarToDom)
+// }
+// const crescentLinkEvent = () => {
+//     crescentCity.addEventListener('click', loadCrescentToDom)
+// }
+// const fullLinkEvent = () => {
+//     fullCollection.addEventListener('click', loadFullToDom)
+// }
 
 
 // Event Handlers
 
-const renderBooksToDom = (e) => {
-    e.preventDefault()
-    // resetCardContainer()
+// const renderBooksToDom = (e) => {
+//     e.preventDefault()
+//     // resetCardContainer()
 
-    alert('hi')
-}
+//     alert('hi')
+// }
 
 
 
@@ -77,34 +76,63 @@ function getBooks() {
     .then(resp => resp.json())
     .then(resp => {
         const throneArray = resp.filter(book => book.series === 'Throne of Glass')
-        console.log(throneArray)
         const acotarArray = resp.filter(book => book.series === 'ACOTAR')
-        console.log(acotarArray)
         const crescentArray = resp.filter(book => book.series === 'Crescent City')
-        console.log(crescentArray)
         const fullArray = resp
-        console.log(fullArray)
+        throneOfGlass.addEventListener('click', (e) => {
+            e.preventDefault()
+            resetCardContainer()
+            throneArray.forEach(book => createBookCard(book))
+        })
+        acotar.addEventListener('click', (e) => {
+            e.preventDefault()
+            resetCardContainer()
+            acotarArray.forEach(book => createBookCard(book))
+        })
+        crescentCity.addEventListener('click', (e) => {
+            e.preventDefault()
+            resetCardContainer()
+            crescentArray.forEach(book => createBookCard(book))
+        })
+        fullCollection.addEventListener('click', (e) => {
+            e.preventDefault()
+            resetCardContainer()
+            fullArray.forEach(book => createBookCard(book))
+        })
     })
 }
-
 function createBookCard (book) {
+    const divRow = document.createElement('div')
     const divCol = document.createElement('div')
     const divCard = document.createElement('div')
-    const divImage = document.createElement('img')
+    const divImage = document.createElement('div')
+    const image = document.createElement('img')
     const divContent = document.createElement('div')
     const pSeriesName = document.createElement('p')
     const pBookOrder = document.createElement('p')
 
-    divCol.className = 'col s12 m6'
+    divRow.className = 'row'
+    divCol.className = 'col s2 m4 l6'
     divCard.className = 'card'
     divImage.className = 'book-image'
     divContent.className = 'card-content'
     pSeriesName.className = 'series'
     pBookOrder.className = 'book-order'
 
-    divImage.src = book.div
+    divImage.appendChild(image)
+    divContent.appendChild(pSeriesName)
+    divContent.appendChild(pBookOrder)
+    divCard.appendChild(divImage)
+    divCard.appendChild(divContent)
+    cardContainer.append(divRow, divCol)
+    cardContainer.appendChild(divCard)
+    
+    
+    image.src = book.img
     pSeriesName.textContent = book.series
     pBookOrder.textContent = book.order
+
+    return divCard
 
 }
 

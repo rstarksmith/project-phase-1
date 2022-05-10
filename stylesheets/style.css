@@ -27,16 +27,18 @@ body {
 .card-content {
     background-color: black;
 }
-.card {
+/* .card {
     width: 30%;
-}
+} */
 
 .series {
     color: white;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .book-order { 
     color: white;
-    text-align: center;
+    /* text-align: center; */
 }
+
+
