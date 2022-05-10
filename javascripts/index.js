@@ -1,21 +1,23 @@
 // When the DOM loads
 
 document.addEventListener('DOMContentLoaded', () => {
-    throneLinkEvent()  
+    throneLinkEvent() 
+    getBooks() 
 
 })
 
 
 
 // Node Getters
-// nav bar
+//** Nav bar */
 const throneOfGlass = document.getElementById('throne')
 const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const headerLinks = document.querySelectorAll('.header-links')
 
-// quote
+
+//** Quote */
 const divQuote = document.getElementById('title-quote')
 const h6 = document.createElement('h6')
 h6.className = 'quote'
@@ -28,6 +30,18 @@ p.id = 'quote-cite'
 p.innerText = '-A Court of Mist and Fury'
 // rotatingQuote // add function or set quote cite
 divQuote.append(h6, p)
+
+
+//** Card */
+const cardContainer = document.getElementById('card-container')
+//to clear card container
+const resetCardContainer = () => {
+    cardContainer.innerHTML = ''
+}
+
+
+
+
 
 
 
@@ -56,12 +70,20 @@ const loadThroneToDom = (e) => {
 
 
 
-// function getBooks() {
-//     fetch('http://localhost:3000/books')
-//     .then(resp => resp.json())
-//     .then(resp => resp.filter(book => {
-//         return book.series === "Throne of Glass"}))
-// }
+function getBooks() {
+    fetch('http://localhost:3000/books')
+    .then(resp => resp.json())
+    .then(resp => {
+        const throneArray = resp.filter(book => book.series === 'Throne of Glass')
+        console.log(throneArray)
+        const acotarArray = resp.filter(book => book.series === 'ACOTAR')
+        console.log(acotarArray)
+        const crescentArray = resp.filter(book => book.series === 'Crescent City')
+        console.log(crescentArray)
+        const fullArray = resp
+        console.log(fullArray)
+    })
+}
 
 
 
@@ -71,7 +93,7 @@ const loadThroneToDom = (e) => {
 
 
 
-// //targets clicks on links
+// //targets clicks on links *keep out unless needed
 
 // displayBooksToDom()
 
