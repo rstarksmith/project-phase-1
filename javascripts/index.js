@@ -53,22 +53,19 @@ function getBooks() {
         const acotarArray = resp.filter(book => book.series === 'ACOTAR')
         const crescentArray = resp.filter(book => book.series === 'Crescent City')
         const fullArray = resp
-        function renderBooksToDom() {
-            ulHeaderLinks.addEventListener('click', (e) => {
-                e.preventDefault()
-                resetCardContainer()
-                if(e.target === throneOfGlass) {
-                    throneArray.forEach(book => createBookCard(book))
-                } else if (e.target === acotar) {
-                    acotarArray.forEach(book => createBookCard(book))
-                } else if(e.target === crescentCity) {
-                    crescentArray.forEach(book => createBookCard(book))
-                } else if(e.target === fullCollection) {
-                    fullArray.forEach(book => createBookCard(book))
-                }
-            })
-        }   
-        renderBooksToDom()
+        ulHeaderLinks.addEventListener('click', (e) => {
+            e.preventDefault()
+            resetCardContainer()
+            if(e.target === throneOfGlass) {
+                throneArray.forEach(book => createBookCard(book))
+            } else if (e.target === acotar) {
+                acotarArray.forEach(book => createBookCard(book))
+            } else if(e.target === crescentCity) {
+                crescentArray.forEach(book => createBookCard(book))
+            } else if(e.target === fullCollection) {
+                fullArray.forEach(book => createBookCard(book))
+            }
+        })
     })
 }
 
