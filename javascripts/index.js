@@ -33,6 +33,7 @@ divQuote.append(h6, p)
 
 //** Card */
 const cardContainer = document.getElementById('card-container')
+
 //to clear card container
 const resetCardContainer = () => {
     cardContainer.innerHTML = ''
@@ -127,19 +128,20 @@ function createBookCard (book) {
     cardContainer.append(divRow, divCol)
     cardContainer.appendChild(divCard)
     
-    
     image.src = book.img
     pSeriesName.textContent = book.series
     pBookOrder.textContent = book.order
 
-    return divCard
+    // return divCard ?
 
 }
 
+//HTML CARD LAYOUT
+        // <div class="row">
             // <div class="col s12 m6">
             //     <div class="card">
             //         <div class="card-image">
-            //             <img class="book-image" src="https://i.guim.co.uk/img/media/25a46c1123f57901456105b462b183d117fae044/0_0_260_400/master/260.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=a966fe653671452eeead1d9a32dabd1c">
+            //             <img class="book-image" src="https://i.guim.co.uk/img">
             //         </div>
             //         <div class="card-content">
             //             <p class="series">Series Name</p>
@@ -147,6 +149,7 @@ function createBookCard (book) {
             //         </div>
             //     </div>
             // </div>
+        // </div>
 
 
 
@@ -179,11 +182,20 @@ function createBookCard (book) {
 // }
 
 
+// headerLinks.forEach(addEventListener('click', listBySeries)
 
 
-
-
-
-
-
+// function listBySeries(e) {
+//     e.preventDefault()
+//     resetCardContainer()
+//     if(e.target === throneOfGlass) {
+//         throneArray.forEach(book => createBookCard(book))
+//     } else if (e.target === acotar) {
+//         acotarArray.forEach(book => createBookCard(book))
+//     } else if(e.target === crescentCity) {
+//         crescentArray.forEach(book => createBookCard(book))
+//     } else if(e.target === fullCollection) {
+//         fullArray.forEach(book => createBookCard(book))
+//     }
+// }
 
