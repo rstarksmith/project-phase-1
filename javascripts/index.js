@@ -35,9 +35,9 @@ divQuote.append(h6, p)
 //** Card */
 const cardContainer = document.getElementById('card-container')
 //to clear card container
-const resetCardContainer = () => {
-    cardContainer.innerHTML = ''
-}
+// const resetCardContainer = () => {
+//     cardContainer.innerHTML = ''
+// }
 
 
 
@@ -48,7 +48,7 @@ const resetCardContainer = () => {
 
 // Event Listeners
 const throneLinkEvent = () => {
-    throneOfGlass.addEventListener('click', loadThroneToDom)
+    throneOfGlass.addEventListener('click', renderBooksToDom)
 }
 const acotarLinkEvent = () => {
     acotar.addEventListener('click', loadAcotarToDom)
@@ -63,8 +63,10 @@ const fullLinkEvent = () => {
 
 // Event Handlers
 
-const loadThroneToDom = (e) => {
+const renderBooksToDom = (e) => {
     e.preventDefault()
+    // resetCardContainer()
+
     alert('hi')
 }
 
@@ -84,6 +86,40 @@ function getBooks() {
         console.log(fullArray)
     })
 }
+
+function createBookCard (book) {
+    const divCol = document.createElement('div')
+    const divCard = document.createElement('div')
+    const divImage = document.createElement('img')
+    const divContent = document.createElement('div')
+    const pSeriesName = document.createElement('p')
+    const pBookOrder = document.createElement('p')
+
+    divCol.className = 'col s12 m6'
+    divCard.className = 'card'
+    divImage.className = 'book-image'
+    divContent.className = 'card-content'
+    pSeriesName.className = 'series'
+    pBookOrder.className = 'book-order'
+
+    divImage.src = book.div
+    pSeriesName.textContent = book.series
+    pBookOrder.textContent = book.order
+
+}
+
+            // <div class="col s12 m6">
+            //     <div class="card">
+            //         <div class="card-image">
+            //             <img class="book-image" src="https://i.guim.co.uk/img/media/25a46c1123f57901456105b462b183d117fae044/0_0_260_400/master/260.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=a966fe653671452eeead1d9a32dabd1c">
+            //         </div>
+            //         <div class="card-content">
+            //             <p class="series">Series Name</p>
+            //             <p class="book-order">1 of 2</p>
+            //         </div>
+            //     </div>
+            // </div>
+
 
 
 
