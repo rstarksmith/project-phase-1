@@ -34,7 +34,7 @@ const citeArray = ['-A Court of Mist and Fury','-Throne of Glass']
 
 h6.className = 'quote'
 h6.id = 'quote-line'
-h6.style.transition = 'all 2s'
+h6.style.transition = 'all 1s'
 h6.style.cursor = 'pointer'
 h6.textContent = quoteArray[0]
 
@@ -115,7 +115,8 @@ function createBookCard (book) {
     divRow.className = 'row'
     divCol.className = 'col s1 m2 l4'
     divCard.className = 'card'
-    divImage.className = 'book-image'
+    divImage.className = 'div-image'
+    image.className = 'book-image'
     divContent.className = 'card-content'
     pSeriesName.className = 'series'
     pBookOrder.className = 'book-order'
