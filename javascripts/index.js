@@ -20,26 +20,18 @@ const ulHeaderLinks = document.getElementById('nav-mobile')
 //** Card */
 const cardContainer = document.getElementById('card-container')
 
-
 //** Quote */
 const divQuote = document.getElementById('title-quote')
 const divHeader = document.getElementById('header')
 const imageHeader = document.getElementById('title')
 
-// const popUpImg1 = document.createElement('img')
-// const popUpImg2 = document.createElement('img')
 const h6 = document.createElement('h6')
 const p = document.createElement('p')
 
 const quoteArray = ['\"To the stars who listen and the dreams that are answered\"', '\'Libraries were full of ideas - perhaps the most dangerous and powerful of all weapons.\"']
 const citeArray = ['-A Court of Mist and Fury','-Throne of Glass']
 
-// popUpImg1.id = 'pop-1'
-// popUpImg1.src = 'https://i.imgur.com/QI4Vtxg.png'
-// popUpImg1.style.transition = 'all 2s'
-// popUpImg2.id = 'pop-2'
-// popUpImg2.src = 'https://i.imgur.com/dRQWx0v.png'
-// popUpImg2.style.transition = 'all 2s'
+
 h6.className = 'quote'
 h6.id = 'quote-line'
 h6.style.transition = 'all 2s'
@@ -50,8 +42,8 @@ p.className = "quote"
 p.id = 'quote-cite'
 p.style.cursor = 'pointer'
 p.textContent = citeArray[0]
-// imageHeader.append(popUpImg1, popUpImg2) 
 divQuote.append(h6, p)
+
 
 function quoteChange(){
     divQuote.addEventListener('mouseover', () => {
@@ -72,7 +64,6 @@ function quoteChange(){
 }
 
 
-
 //to clear card container ** can change if not used again
 const resetContent = (element) => {
     element.innerHTML = ''
@@ -84,9 +75,6 @@ const resetCardContainer = () => {
 
 
 // Event Listeners
-
-
-// Event Handlers
 
 
 function getBooks() {
