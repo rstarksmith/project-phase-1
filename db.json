@@ -112,13 +112,5 @@
             "series": "DC Icons Series",
             "order": "standalone"
         }
-    ],
-
-    "comments": [
-        {
-            "id": 1,
-            "bookId": 3,
-            "content": "This is my favorite book!"
-        }
     ]
 }
