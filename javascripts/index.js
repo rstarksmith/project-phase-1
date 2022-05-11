@@ -43,11 +43,14 @@ const citeArray = ['-A Court of Mist and Fury','-Throne of Glass']
 h6.className = 'quote'
 h6.id = 'quote-line'
 h6.style.transition = 'all 2s'
+h6.style.cursor = 'pointer'
 h6.textContent = quoteArray[0]
+
 p.className = "quote"
 p.id = 'quote-cite'
+p.style.cursor = 'pointer'
 p.textContent = citeArray[0]
-// imageHeader.append(popUpImg1, popUpImg2)
+// imageHeader.append(popUpImg1, popUpImg2) 
 divQuote.append(h6, p)
 
 function quoteChange(){
@@ -67,7 +70,6 @@ function quoteChange(){
         }
     })  
 }
-
 
 
 
