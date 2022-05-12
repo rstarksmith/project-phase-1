@@ -97,6 +97,11 @@ function getBooks() {
             }
         })
     })
+    .catch((error) => {
+        ulHeaderLinks.addEventListener('click', () => {
+            alert('Server error: Please run json server for db.json')
+        })
+    })
 }
 
 
@@ -115,7 +120,7 @@ function createBookCard (book) {
 
 
     // divRow.className = 'row'
-    divCol.className = 'col s12 m6 l3'
+    // divCol.className = 'col s12 m6 l3'
     divCard.className = 'card'
     divImage.className = 'div-image'
     image.className = 'book-image'
