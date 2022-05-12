@@ -4,18 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteChange()
     getBooks() 
     
-
 })
 
 
-
-// Node Getters
 //** Nav bar */
 const throneOfGlass = document.getElementById('throne')
 const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const ulHeaderLinks = document.getElementById('nav-mobile')
+
 
 //** Card */
 const cardContainer = document.getElementById('card-container')
@@ -102,8 +100,10 @@ function getBooks() {
 }
 
 
+
 function createBookCard (book) {
-    const divRow = document.createElement('div')
+    
+    // const divRow = document.createElement('div')
     const divCol = document.createElement('div')
     const divCard = document.createElement('div')
     const divImage = document.createElement('div')
@@ -111,9 +111,11 @@ function createBookCard (book) {
     const divContent = document.createElement('div')
     const pSeriesName = document.createElement('p')
     const pBookOrder = document.createElement('p')
+    
 
-    divRow.className = 'row'
-    divCol.className = 'col s1 m2 l4'
+
+    // divRow.className = 'row'
+    divCol.className = 'col s12 m6 l3'
     divCard.className = 'card'
     divImage.className = 'div-image'
     image.className = 'book-image'
@@ -121,22 +123,37 @@ function createBookCard (book) {
     pSeriesName.className = 'series'
     pBookOrder.className = 'book-order'
 
-    divImage.appendChild(image)
-    divContent.appendChild(pSeriesName)
-    divContent.appendChild(pBookOrder)
-    divCard.appendChild(divImage)
-    divCard.appendChild(divContent)
-    cardContainer.append(divRow, divCol)
-    cardContainer.appendChild(divCard)
-    
     image.src = book.img
     pSeriesName.textContent = book.series
     pBookOrder.textContent = book.order
+
+    divImage.appendChild(image)
+    divContent.appendChild(pSeriesName)
+    divContent.appendChild(pBookOrder)
+
+    divCard.appendChild(divImage)
+    divCard.appendChild(divContent)
+
+    cardContainer.append(divCol)
+    // divRow.append(divCol)
+    divCol.append(divCard)
+
+    return divCard 
 }
+
+//renderBooks would replace create a card in the fetch for each method
+// Do i need this?
+// function renderBooks (book){
+//     const divCol = document.createElement('div')
+//     divCol.className = 'col s12 m7'
+//     divCol.appendChild(createBookCard())
+//     return divCol
+// }
+
 
 //HTML CARD LAYOUT
         // <div class="row">
-            // <div class="col s12 m6">
+            // <div class="col s12 m6 l4">
             //     <div class="card">
             //         <div class="card-image">
             //             <img class="book-image" src="https://i.guim.co.uk/img">
@@ -148,7 +165,6 @@ function createBookCard (book) {
             //     </div>
             // </div>
         // </div>
-
 
 
 
