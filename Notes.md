@@ -1,18 +1,17 @@
 Author Sara J. Maas fan page that allows you to filter each collection to the DOM.
 ### Features
-    * Form to get book by title to display on page (submit - GET)
-        - Displays img, title, page count?, series? 
-    * User can add comments on the book (submit - POST)
-    * Option to delete the book from read list (click)
+    * Contains 3 links that divide the author's work by collection and displays their order
+    * Contains 1 link that will display all the author's work
+    * Displays quote from author's work that the user can change
     
 
 ### MVP
-    * Create db.json file with information on Sarah J Maas books
+    * Create db.json file with json data on Sarah J Maas books
     * Click on collection name to post books to DOM (click)(.filter)
-    * Have the Quote change 
+    * Create Quote that changes and a mouseover event (dblclick, mouseover, mouseout)
 
     
 ### Stretch Goals
-    * Rating System
-    * DOM changes remain upon reloading page
+    * Create .catch event to remind user to run server
+    * Add form for user to sumbit fan artwork
     

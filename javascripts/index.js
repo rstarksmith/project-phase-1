@@ -86,15 +86,18 @@ function getBooks() {
         ulHeaderLinks.addEventListener('click', (e) => {
             e.preventDefault()
             resetCardContainer()
+            const divRow = document.createElement('div')
+            divRow.className = 'row'
             if(e.target === throneOfGlass) {
-                throneArray.forEach(book => createBookCard(book))
+                throneArray.forEach(book => createBookCard(book, divRow))
             } else if (e.target === acotar) {
-                acotarArray.forEach(book => createBookCard(book))
+                acotarArray.forEach(book => createBookCard(book, divRow))
             } else if(e.target === crescentCity) {
-                crescentArray.forEach(book => createBookCard(book))
+                crescentArray.forEach(book => createBookCard(book, divRow))
             } else if(e.target === fullCollection) {
-                fullArray.forEach(book => createBookCard(book))
+                fullArray.forEach(book => createBookCard(book, divRow))
             }
+            cardContainer.appendChild(divRow)
         })
     })
     .catch((error) => {
@@ -106,9 +109,7 @@ function getBooks() {
 
 
 
-function createBookCard (book) {
-    
-    // const divRow = document.createElement('div')
+function createBookCard (book, divRow) {
     const divCol = document.createElement('div')
     const divCard = document.createElement('div')
     const divImage = document.createElement('div')
@@ -117,10 +118,7 @@ function createBookCard (book) {
     const pSeriesName = document.createElement('p')
     const pBookOrder = document.createElement('p')
     
-
-
-    // divRow.className = 'row'
-    // divCol.className = 'col s12 m6 l3'
+    divCol.className = 'col s4'
     divCard.className = 'card'
     divImage.className = 'div-image'
     image.className = 'book-image'
@@ -139,11 +137,11 @@ function createBookCard (book) {
     divCard.appendChild(divImage)
     divCard.appendChild(divContent)
 
-    cardContainer.append(divCol)
-    // divRow.append(divCol)
-    divCol.append(divCard)
+    divCol.appendChild(divCard)
 
-    return divCard 
+    divRow.appendChild(divCol)
+
+    // return divCard 
 }
 
 //renderBooks would replace create a card in the fetch for each method
