@@ -13,5 +13,7 @@ Author Sara J. Maas fan page that allows you to filter each collection to the DO
     
 ### Stretch Goals
     * Create .catch event to remind user to run server
-    * Add form for user to sumbit fan artwork
+    * Add form for user to sumbit fan artwork to page and display
+    * Ability to click on each book for a list of main characters or description 
+        - would need to add data to db.json
     

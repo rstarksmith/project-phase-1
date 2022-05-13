@@ -1,9 +1,8 @@
 # Reading Log
-This will be the overview of your project. You will detail what your project is about and its purpose.
+This fan website allows you to view different collections of work by the #1 New York Times and internationally bestselling author Sarah J. Maas.  You may also change the quote on the page by doubleclicking on the quote itself when its highlighted. 
 
 ### Requirements 
  * Have json-sever installed
- * 
 
 ### Installation Instructions
  * Fork and clone
@@ -11,7 +10,10 @@ This will be the overview of your project. You will detail what your project is 
  * Open index.html in the browser
 
  ### Resources ###
- MLA:
-Aristotle. Nicomachean Ethics. 350 B.C.E. Trans. W. C. Ross. The Internet Classics Archives. Ed. Daniel C. Stevenson. 1994. Web. 20 May 2015.
-[author.] [title.] [original publication date.] [website name.] [website author.] [update date.] [medium.] [date of access.]
+* Sarah J. Maas (https://sarahjmaas.com/)
+        All book images and quotes belong to the work of Sarah J. Maas
+
+* goodreads (https://www.goodreads.com/)
+
+* Canva
 
