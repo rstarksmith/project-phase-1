@@ -1,9 +1,8 @@
-// When the DOM loads
 
 document.addEventListener('DOMContentLoaded', () => { 
     quoteChange()
     getBooks() 
-    
+    clearPage()
 })
 
 
@@ -13,7 +12,6 @@ const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const ulHeaderLinks = document.getElementById('nav-mobile')
-
 
 //** Card */
 const cardContainer = document.getElementById('card-container')
@@ -26,9 +24,8 @@ const imageHeader = document.getElementById('title')
 const h6 = document.createElement('h6')
 const p = document.createElement('p')
 
-const quoteArray = ['\"To the stars who listen and the dreams that are answered\"', '\'Libraries were full of ideas - perhaps the most dangerous and powerful of all weapons.\"']
+const quoteArray = ['\"To the stars who listen and the dreams that are answered\"', '\"Libraries were full of ideas - perhaps the most dangerous and powerful of all weapons.\"']
 const citeArray = ['-A Court of Mist and Fury','-Throne of Glass']
-
 
 h6.className = 'quote'
 h6.id = 'quote-line'
@@ -62,17 +59,16 @@ function quoteChange(){
 }
 
 
-//to clear card container ** can change if not used again
-const resetContent = (element) => {
-    element.innerHTML = ''
-}
+//clear DOM
 const resetCardContainer = () => {
     cardContainer.innerHTML = ''
 }
 
-
-
-// Event Listeners
+function clearPage () {
+    ulHeaderLinks.addEventListener('dblclick', () => {
+        resetCardContainer()
+    })
+}
 
 
 function getBooks() {
@@ -108,7 +104,6 @@ function getBooks() {
 }
 
 
-
 function createBookCard (book, divRow) {
     const divCol = document.createElement('div')
     const divCard = document.createElement('div')
@@ -118,7 +113,7 @@ function createBookCard (book, divRow) {
     const pSeriesName = document.createElement('p')
     const pBookOrder = document.createElement('p')
     
-    divCol.className = 'col s4'
+    divCol.className = 'col s3 offset-s1'
     divCard.className = 'card'
     divImage.className = 'div-image'
     image.className = 'book-image'
@@ -143,53 +138,3 @@ function createBookCard (book, divRow) {
 
     // return divCard 
 }
-
-//renderBooks would replace create a card in the fetch for each method
-// Do i need this?
-// function renderBooks (book){
-//     const divCol = document.createElement('div')
-//     divCol.className = 'col s12 m7'
-//     divCol.appendChild(createBookCard())
-//     return divCol
-// }
-
-
-//HTML CARD LAYOUT
-        // <div class="row">
-            // <div class="col s12 m6 l4">
-            //     <div class="card">
-            //         <div class="card-image">
-            //             <img class="book-image" src="https://i.guim.co.uk/img">
-            //         </div>
-            //         <div class="card-content">
-            //             <p class="series">Series Name</p>
-            //             <p class="book-order">1 of 2</p>
-            //         </div>
-            //     </div>
-            // </div>
-        // </div>
-
-
-
-// //Refactored
-
- // throneOfGlass.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     resetCardContainer()
-        //     throneArray.forEach(book => createBookCard(book))
-        // })
-        // acotar.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     resetCardContainer()
-        //     acotarArray.forEach(book => createBookCard(book))
-        // })
-        // crescentCity.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     resetCardContainer()
-        //     crescentArray.forEach(book => createBookCard(book))
-        // })
-        // fullCollection.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     resetCardContainer()
-        //     fullArray.forEach(book => createBookCard(book))
-        // })

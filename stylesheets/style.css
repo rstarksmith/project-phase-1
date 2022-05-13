@@ -13,7 +13,6 @@ body {
     margin: auto;
     padding-top: 20px;
     width: 300px
-
 }
 
 #quote-cite{
@@ -27,14 +26,13 @@ body {
 }
 
 
-
-
-/* Card css */
+/* Card*/
 
 .card-content {
     background-color: black;
-    width: 100%;
+    width: 130%;
 }
+
 .card {
     background-color: black;
     width: 70%;
@@ -48,14 +46,14 @@ body {
 
 .book-order { 
     color: rgb(164, 164, 164);
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .book-image {
     width: 200px;
     display: block;
     margin: auto;
+    align-content: center;
 }
 
 
