@@ -6,17 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-//** Nav bar */
 const throneOfGlass = document.getElementById('throne')
 const acotar = document.getElementById('acotar')
 const crescentCity = document.getElementById('crescent')
 const fullCollection = document.getElementById('full-collect')
 const ulHeaderLinks = document.getElementById('nav-mobile')
 
-//** Card */
 const cardContainer = document.getElementById('card-container')
 
-//** Quote */
 const divQuote = document.getElementById('title-quote')
 const divHeader = document.getElementById('header')
 const imageHeader = document.getElementById('title')
