@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
     quoteChange()
     getBooks() 
-    clearPage()
 })
 
 
@@ -26,13 +25,10 @@ const citeArray = ['-A Court of Mist and Fury','-Throne of Glass']
 
 h6.className = 'quote'
 h6.id = 'quote-line'
-h6.style.transition = 'all 1s'
-h6.style.cursor = 'pointer'
 h6.textContent = quoteArray[0]
 
 p.className = "quote"
 p.id = 'quote-cite'
-p.style.cursor = 'pointer'
 p.textContent = citeArray[0]
 divQuote.append(h6, p)
 
@@ -61,11 +57,9 @@ const resetCardContainer = () => {
     cardContainer.innerHTML = ''
 }
 
-function clearPage () {
-    ulHeaderLinks.addEventListener('dblclick', () => {
-        resetCardContainer()
-    })
-}
+ulHeaderLinks.addEventListener('dblclick', () => {
+    resetCardContainer()
+})
 
 
 function getBooks() {
@@ -132,6 +126,4 @@ function createBookCard (book, divRow) {
     divCol.appendChild(divCard)
 
     divRow.appendChild(divCol)
-
-    // return divCard 
 }

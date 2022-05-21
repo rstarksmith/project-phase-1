@@ -15,12 +15,17 @@ body {
     width: 300px
 }
 
-#quote-cite{
+#quote-cite {
     padding-bottom: 20px
+}
+
+#quote-line {
+    transition: all 1s;
 }
 
 .quote {
     color: white;
+    cursor: pointer;
     font-style: italic;
     text-align: center;
 }
